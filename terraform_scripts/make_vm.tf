@@ -8,7 +8,7 @@ provider "google" {
 }
 resource "google_compute_instance" "gem5sim" {
   metadata = {
-    startup-script = "#!/bin/bash\nwget -O - https://github.com/peterdholm/gem5sim/blob/21ede8b6854430df370e7176382c265b5e5faca8/terraform_scripts/remote_install.sh | bash"
+		startup-script = "#!/bin/bash\nwget -O - https://raw.githubusercontent.com/peterdholm/gem5sim/21ede8b6854430df370e7176382c265b5e5faca8/terraform_scripts/remote_install.sh | bash"
   }
   boot_disk {
     auto_delete = true
